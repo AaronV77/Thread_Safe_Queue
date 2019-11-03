@@ -15,6 +15,8 @@ Email: Aaron.A.Valoroso@erdc.dren.mil
     #include <pthread.h>
 #endif
 
+#define queue_datatype int
+
 // Debugging Color Specification. 
 #define O_NOR  "\x1B[0m"     // NORMAL
 #define O_ERR  "\x1B[31m"    // RED
@@ -25,7 +27,7 @@ Email: Aaron.A.Valoroso@erdc.dren.mil
 #define O_END  "\x1B[36m"    // CYAN
 
 struct QNode { 
-    int key; 
+    queue_datatype key; 
     struct QNode* next; 
 }; 
 
@@ -38,9 +40,9 @@ typedef struct QNode node;
 typedef struct Queue_Container queue;
 
 queue * create_queue();
-void push(queue * q, int k);
-int pop(queue * q);
-int queue_size(queue * q);
+void push(queue * q, queue_datatype k);
+queue_datatype pop(queue * q);
+queue_datatype queue_size(queue * q);
 void list_queue(queue * node);
 void queue_cleanup(queue * q);
 

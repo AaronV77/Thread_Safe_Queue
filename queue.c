@@ -52,7 +52,7 @@ queue * create_queue() {
  * \param[in] q will be the created queue structure that has memory.
  * \param[in] k is the number that will be stored.
  */
-void push(queue * q, int k) { 
+void push(queue * q, queue_datatype k) { 
 
 #if THREADS
     pthread_mutex_lock(&lock);
@@ -89,7 +89,7 @@ void push(queue * q, int k) {
  * \param[out] return (on success) the stored number from the popped node.
  * \param[out] return (on failure) a zero.
  */
-int pop(queue * q) { 
+queue_datatype pop(queue * q) { 
 
 #if THREADS
     pthread_mutex_lock(&lock);
@@ -100,7 +100,7 @@ int pop(queue * q) {
         return 0; 
     }
     
-    int stored_number = q->front->key;
+    queue_datatype stored_number = q->front->key;
     node * temp = q->front;
     q->front = q->front->next;
     free(temp);
@@ -126,7 +126,7 @@ int pop(queue * q) {
  * \param[out] return (on success) the size of the queue structure.
  * \param[out] return (on failure) a zero.
  */
-int queue_size(queue * q) {
+queue_datatype queue_size(queue * q) {
 
 #if THREADS
     pthread_mutex_lock(&lock);
@@ -135,7 +135,7 @@ int queue_size(queue * q) {
     if (q->front == NULL) 
         return 0; 
     
-    int stored_number = q->size;
+    queue_datatype stored_number = q->size;
     if (queue_debugger) printf("\t%sLeaving queue_size()%s\n", O_END, O_NOR);
 #if THREADS
     pthread_mutex_unlock(&lock);
