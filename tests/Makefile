@@ -1,5 +1,5 @@
 all:
-	gcc basic_functionality.c ../queue.o -L/usr/local/lib/libcheck.so.0 -lcheck -o c
+	gcc queue_tests.c ../queue.o -L/usr/local/lib/libcheck.so.0 -lcheck -lpthread -DTHREADS -o c
 
 run:
 	./c
