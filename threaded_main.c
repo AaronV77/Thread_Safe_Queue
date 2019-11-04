@@ -1,7 +1,7 @@
 /*-------------------------------------------------------------------
 Author: Aaron Anthony Valoroso
 Date: November 3rd, 2019
-License: GPL
+License: None
 Email: Aaron.A.Valoroso@erdc.dren.mil
 
 To Run (Type): make threads
