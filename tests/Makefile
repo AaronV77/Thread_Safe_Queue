@@ -1,6 +1,5 @@
 all:
-	export LD_LIBRARY_PATH=/usr/local/lib
-	gcc basic_functionality.c ../queue.o -lcheck -o c
+	gcc basic_functionality.c ../queue.o -Llibcheck.so.0 -lcheck -o c
 
 run:
 	./c
