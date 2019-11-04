@@ -1,0 +1,22 @@
+anguage: C
+
+git:
+  quiet: true
+  submodules: false
+
+matrix:
+  include:
+    - os: linux
+      dist: bionic
+
+compiler: gcc
+
+before_install: 
+  - sudo apt install check
+  - git clone https://github.com/AaronV77/Thread_Safe_Queue.git
+  - make
+  - cd tests
+  - make
+
+script:
+  - make run || travis_terminate 1;
