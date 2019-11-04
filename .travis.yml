@@ -24,6 +24,7 @@ before_install:
   - make
   - cd tests
   - make
+  - ls /usr/local/lib
 
 script:
   - make run || travis_terminate 1;
