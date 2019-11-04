@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/AaronV77/Thread_Safe_Queue.svg?branch=master)](https://travis-ci.com/AaronV77/Thread_Safe_Queue)
+
 # Thread Safe Queue
 
 This repository is an example of a thread safe queue data structure, and that has perfect memory cleanup via Valgrind. I'm  not
