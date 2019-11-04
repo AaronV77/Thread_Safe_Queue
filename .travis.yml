@@ -1,0 +1,30 @@
+language: C
+
+git:
+  quiet: true
+  submodules: false
+
+matrix:
+  include:
+    - os: linux
+      dist: bionic
+
+compiler: gcc
+
+before_install: 
+  - wget https://github.com/libcheck/check/releases/download/0.13.0/check-0.13.0.tar.gz
+  - tar xvf check-0.13.0.tar.gz
+  - cd check-0.13.0
+  - ./configure
+  - make
+  - sudo make install
+  - cd ..
+  - git clone https://github.com/AaronV77/Thread_Safe_Queue.git
+  - cd Thread_Safe_Queue
+  - make
+  - cd tests
+  - make
+  - export LD_LIBRARY_PATH=/usr/local/lib
+
+script:
+  - make run || travis_terminate 1;

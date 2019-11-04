@@ -1,4 +1,4 @@
-#include <check.h>               
+#include <check.h>
 #include "../queue.h"        
 #include <stdlib.h>
 
@@ -8,7 +8,8 @@ START_TEST(test_queue_fill) {
     queue * q = create_queue();
     push(q, 10);
     number = pop(q);
-    ck_assert_int_eq(number, 10);
+    printf("The number: %d\n", number);
+    ck_assert_int_eq(number, 20);
     queue_cleanup(q);
 } END_TEST
 
