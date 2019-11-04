@@ -12,6 +12,7 @@ matrix:
 compiler: gcc
 
 before_install: 
+  - ls -la
   - wget https://github.com/libcheck/check/releases/download/0.13.0/check-0.13.0.tar.gz
   - tar xvf check-0.13.0.tar.gz
   - cd check-0.13.0
