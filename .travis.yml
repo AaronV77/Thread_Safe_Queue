@@ -24,4 +24,5 @@ before_install:
   - make
 
 script:
+  - bash test.sh
   - ./c || travis_terminate 1;
