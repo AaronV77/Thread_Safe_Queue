@@ -12,15 +12,15 @@ matrix:
 compiler: gcc
 
 before_install: 
+  - mkdir check
+  - cd check
   - wget https://github.com/libcheck/check/releases/download/0.13.0/check-0.13.0.tar.gz
   - tar xvf check-0.13.0.tar.gz
   - cd check-0.13.0
   - ./configure
   - make
   - sudo make install
-  - cd ..
-  - git clone https://github.com/AaronV77/Thread_Safe_Queue.git
-  - cd Thread_Safe_Queue
+  - cd ../../
   - make
   - cd tests
   - make
