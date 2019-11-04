@@ -18,11 +18,12 @@ before_install:
   - ./configure
   - make
   - sudo make install
+  - cd ..
   - git clone https://github.com/AaronV77/Thread_Safe_Queue.git
+  - cd Thread_Safe_Queue
   - make
   - cd tests
   - make
 
 script:
-  - bash test.sh
-  - ./c || travis_terminate 1;
+  - make run || travis_terminate 1;
