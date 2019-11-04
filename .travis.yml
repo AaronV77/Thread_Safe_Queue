@@ -17,7 +17,6 @@ before_install:
   - cd check-0.13.0
   - ./configure
   - make
-  - make check
   - sudo make install
   - git clone https://github.com/AaronV77/Thread_Safe_Queue.git
   - make
@@ -25,4 +24,4 @@ before_install:
   - make
 
 script:
-  - make run || travis_terminate 1;
+  - ./c || travis_terminate 1;
