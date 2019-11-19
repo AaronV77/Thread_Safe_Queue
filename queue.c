@@ -1,21 +1,9 @@
-/**
- * @file
- * @author Aaron Valoroso <Aaron.A.Valoroso@erdc.dren.mil>
- * @date November 3rd, 2019
- *
- * @section Description
- *
- * This library is an implmentation of the Queue data structure that has the
- * ability to use threads. This library is thread safe, and to turn the thread
- * feature on or off, is by passing the -DTHREADS option when compiling your 
- * main code. This library does use a macro called THREADS, make sure that no 
- * dependencies have the same macro. Lastly, this library has the feature of 
- * being able to create multiple queue data structures and maintain them. In 
- * order to use this library correctly, make sure to call create_queue and 
- * queue_cleanup. A quick note, this library will allow different threads to 
- * work on different queue structures simultaneously. Lastly, you have have the 
- * ability to have multiple threads work on any given queue structure interchangeable.
- */
+/*-------------------------------------------------------------------
+Author: Aaron Anthony Valoroso
+Date: November 3rd, 2019
+License: None
+Email: valoroso99@gmail.com
+--------------------------------------------------------------------*/
 #include "queue.h"
  
  // Global Locking mechanism that comes pre-initialized.
