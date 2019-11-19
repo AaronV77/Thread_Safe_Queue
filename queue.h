@@ -45,5 +45,6 @@ queue_datatype pop(queue * q);
 queue_datatype queue_size(queue * q);
 void list_queue(queue * node);
 void queue_cleanup(queue * q);
+void queue_util_debugger();
 
 #endif
