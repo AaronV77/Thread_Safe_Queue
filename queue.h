@@ -2,7 +2,7 @@
 Author: Aaron Anthony Valoroso
 Date: November 3rd, 2019
 License: None
-Email: Aaron.A.Valoroso@erdc.dren.mil
+Email: valoroso99@gmail.com
 --------------------------------------------------------------------*/
 #ifndef QUEUE_H
 #define QUEUE_H
