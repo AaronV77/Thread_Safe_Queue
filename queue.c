@@ -59,7 +59,7 @@ void push(queue * q, queue_datatype k) {
     q->size++;
     if (queue_debugger) printf("\t%sLeaving push()%s\n", O_END, O_NOR);
 #if THREADS
-    pthread_mutex_lock(&lock);
+    pthread_mutex_unlock(&lock);
 #endif
 
     return;
